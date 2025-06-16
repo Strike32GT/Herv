@@ -1,0 +1,15 @@
+body{
+    background-color: antiquewhite;
+}
+
+.fa-trash {
+    font-size: 26px;
+}
+
+.enviar{
+    margin-bottom: 5px;
+}
+
+#foro-answers{
+    display: none;
+}

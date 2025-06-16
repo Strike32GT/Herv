@@ -1,0 +1,21 @@
+body{
+    background-color:rgb(200, 231, 233);
+}
+    
+
+.placeholder-light::placeholder{
+    color: aliceblue;
+}
+
+
+body::-webkit-scrollbar{
+    width: 15px;
+}
+body::-webkit-scrollbar-thumb{
+    background: red;
+    border-radius: 50px;
+}
+body::-webkit-scrollbar-thumb:hover{
+    background: blue;
+    border-radius: 50px;
+}

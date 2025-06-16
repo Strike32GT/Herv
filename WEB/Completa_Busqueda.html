@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://images.icon-icons.com/1057/PNG/128/enable_server_icon-icons.com_76722.png">
+    <title>Búsqueda completa</title>
+
+
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
+
+
+</head>
+<body>
+     <canvas id="MiGrafica" width="100" height="100"></canvas>
+     <canvas id="MiGrafica2" width="100" height="100"></canvas>
+     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+        
+
+     <script> miCanvas=document.getElementById('MiGrafica').getContext("2d");
+        var chart=new Chart(miCanvas,{
+            type:"pie",
+            data:{
+                labels:["Primera Habilidad","Segunda Habilidad","Tercera Habilidad","Cuarta Habilidad"],
+                datasets:[{
+                      backgroundColor:["#ebeb1a","#9533e7","#105cff","#4d97b3"],
+                      borderColor:"#000000",
+                      data:[12,39,5,30],
+                      borderWidth:1     
+                    }]
+            },
+            options:{
+                maintainAspectRatio:false,
+            plugins:{
+                title:{
+                    display:true,
+                    text:"Estadística Herv"
+                }
+            }
+            },
+            
+        });
+    </script>
+    
+   
+
+
+</body>
+</html>

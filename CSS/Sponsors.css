@@ -1,0 +1,68 @@
+/* Carrusel Sponsors */
+.mov {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    padding: 1rem 0;
+}
+
+.mov .mov-m {
+    display: flex;
+    animation: scroll 40s linear infinite;
+    -webkit-animation: scroll 40s linear infinite;
+    gap: 2rem;
+    width: max-content;
+}
+
+.mov .mg {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 180px;
+}
+
+.mov .mg img {
+    width: 100%;
+    max-width: 160px;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(0);
+    transition: transform 0.3s ease;
+}
+
+.mov .mg img:hover {
+    transform: scale(1.05);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsividad adicional */
+@media screen and (max-width: 768px) {
+    .mov .mg {
+        min-width: 140px;
+    }
+
+    .mov .mg img {
+        max-width: 120px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .mov .mg {
+        min-width: 100px;
+    }
+
+    .mov .mg img {
+        max-width: 100px;
+    }
+}

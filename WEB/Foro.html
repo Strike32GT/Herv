@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="https://images.icon-icons.com/940/PNG/512/11_icon-icons.com_73791.png">
+    <link rel="stylesheet" href="../CSS/Foro.css">
+    <title>Foro</title>
+</head>
+<body>
+
+<!--Comentarios del Foro-->
+    <div id="startcoment">  
+    <h1 class="text-center">Foro</h1>
+    <form action="">
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Usuario:</label>
+        <input type="text" class="form-control w-50" id="user" placeholder="introduzca su usuario">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Comentario(s):</label>
+        <textarea class="form-control w-50" id="message" rows="3"></textarea>
+      </div>
+      <i class="fa-solid fa-trash ms-4 me-4" id="tash"></i>
+      <button type="submit" class="btn btn-outline-success enviar" id="enviar">Enviar</button>
+    </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="../JAVASCRIPT/Foro.js"></script>
+
+<!--Respuestas del Foro-->    
+    <div id="foro-answers">
+      <h2>Respuestas del Foro</h2>
+      <a href="Foro.html" class=" btn btn-warning" id="comentar_de_nuevo" >Comentar de nuevo</a>
+      <div id="answers"></div>
+    </div>
+
+
+  </body>
+</html>
