@@ -12,12 +12,12 @@ class UsuarioDB
     }
 
  public function agregar($BD,$usuario){
-    $sql="INSERT INTO usuario(Nombre,Email,professor_id)
-    VALUES (:name,:credits,:professor_id)";
+    $sql="INSERT INTO usuario(Nombre,Email,Password)
+    VALUES (:Nombre,:Email,:Password)";
     $query=$BD->prepare($sql);
-    $query->bindValue(":name",$cursos->getName());
-    $query->bindValue(":credits",$cursos->getCredits());
-    $query->bindValue(":professor_id",$cursos->getProfessor_id());
+    $query->bindValue(":Nombre",$usuario->getNombre());
+    $query->bindValue(":Email",$usuario->getEmail());
+    $query->bindValue(":Password",$usuario->getPassword());
     try{
         $query->execute();
         return 1;
