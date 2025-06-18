@@ -12,7 +12,7 @@ class Usuario{
         $this->_nombre=$nombre;
         $this->_email=$email;
         $this->_password=$password;
-        $this->_fecha_creacion=$_fecha_creacion;
+        $this->_fecha_creacion=$fecha_creacion;
     }
 
     //GETTER
@@ -38,7 +38,7 @@ class Usuario{
 
     //SETTER
     public function setId($id_usuario){
-        $this->_id=$id_usuario;
+        $this->_id_usuario=$id_usuario;
     }
 
     public function setNombre($nombre){

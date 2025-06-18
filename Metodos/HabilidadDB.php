@@ -1,6 +1,6 @@
 <?php
 require_once("./Modelo/Habilidad.php");
-class EmpleadoAsesoriaDB
+class HabilidadDB
 {
     public function listar($BD){
         $sql="SELECT habilidad.id_habilidad,habilidad.Nombre,
@@ -16,7 +16,7 @@ class EmpleadoAsesoriaDB
     VALUES (:Nombre,:Estado)";
     $query=$BD->prepare($sql);
     $query->bindValue(":Nombre",$habilidad->getNombre());
-    $query->bindValue(":Estado",$habilidad->get());
+    $query->bindValue(":Estado",$habilidad->getEstado());
     try{
         $query->execute();
         return 1;
