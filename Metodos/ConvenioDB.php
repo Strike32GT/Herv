@@ -26,6 +26,42 @@ class ConvenioDB
         echo $err->getMessage();
         return -1;
     }
- } 
+ }
+ 
+ public function editar($BD,$convenio){
+    $sql="UPDATE convenio SET Nombre=:Nombre, Lugar=:Lugar,Sede=:Sede
+          WHERE id_universidad=:id";
+    $query=$BD->prepare($sql);
+    $query->bindValue(":Nombre",$convenio->getNombre());      
+    $query->bindValue(":Lugar",$convenio->getLugar());
+    $query->bindValue(":Sede",$convenio->getSede());
+    $query->bindValue(":id",$convenio->getId(),PDO::PARAM_INT);      
+     
+    try{
+        $query->execute();
+        return 1;
+    }
+    catch(PDOException $err){
+        echo $err->getMessage();
+        return -1;
+    }
+
+ }
+
+ public function eliminar($BD,$id_universidad){
+    $sql="DELETE FROM convenio WHERE id_universidad=:id";
+    $query=$BD->prepare($sql);
+    $query->bindValue(":id",$id_universidad,PDO::PARAM_INT);
+    try{
+        $query->execute();
+        return 1;
+    }
+    catch(PDOException $err){
+        echo $err->getMessage();
+        return -1;
+    }
+ }
+
+
 }
 ?>
