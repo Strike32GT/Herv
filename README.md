@@ -1,23 +1,28 @@
-# Nombre del Proyecto
+# HERV 
 
-Aplicación Web de Gestión Empresarial
+Aplicación Web de Orientación Vocacional basada en Habilidades
 
 ---
 
 ## Descripción General
 
-Esta es una aplicación web desarrollada con **PHP**, **HTML5**, **CSS3** y **JavaScript**, diseñada para gestionar diferentes módulos empresariales como habilidades, convenios, usuarios y asesorías de empleados. Utiliza **XAMPP** como servidor local y se conecta a una base de datos **MySQL** mediante **PDO** para garantizar seguridad y eficiencia en el manejo de datos.
+Esta es una aplicación web desarrollada con **PHP**, **HTML5**, **CSS3** y **JavaScript**, diseñada para ayudar a las personas a registrar sus **habilidades personales** y, en base a ellas, recibir **recomendaciones de carreras universitarias** alineadas con su perfil. 
+
+La plataforma utiliza **XAMPP** como servidor local y se conecta a una base de datos **MySQL** mediante **PDO**, garantizando seguridad y eficiencia en el manejo de datos.
+
 
 ---
 
 ## Características Principales
 
-- Gestión de usuarios y roles
-- Administración de habilidades y convenios
-- Módulo de asesoría para empleados
-- Interfaz intuitiva y responsiva
-- Seguridad en el acceso y manejo de datos
-- Panel de administración para gestión avanzada
+- Registro y gestión de usuarios
+- Ingreso y administración de habilidades personales
+- Recomendación de carreras universitarias según habilidades registradas
+- Módulo de convenios con instituciones educativas
+- Asesoría vocacional personalizada para los usuarios
+- Interfaz intuitiva, moderna y responsiva
+- Seguridad en el acceso y gestión de datos (uso de PDO)
+- Panel de administración para supervisar y gestionar el sistema
 
 ---
 
@@ -87,8 +92,8 @@ Esta es una aplicación web desarrollada con **PHP**, **HTML5**, **CSS3** y **Ja
 ## Créditos y Autor
 
 - **Autor:** [Fernando Mas and Ximena Chumbirayco]
-- **Contacto:** [roberto.mas@tecsup.edu.pe]
-- **Contacto:** [ximena.chumbirayco@tecsup.edu.pe]
+- **Contacto 1:** [roberto.mas@tecsup.edu.pe]
+- **Contacto 2:** [ximena.chumbirayco@tecsup.edu.pe]
 
 ---
 
