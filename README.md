@@ -79,7 +79,7 @@ Esta es una aplicación web desarrollada con **PHP**, **HTML5**, **CSS3** y **Ja
 
 > _Ejemplo de imágenes, reemplaza por tus propias capturas_
 
-![Pantalla de inicio](https://ibb.co/ym39mRxV)
+![Pantalla de inicio](Capturas/WindowsUser.png)
 ![Panel de administración](https://via.placeholder.com/800x400?text=Panel+de+Administraci%C3%B3n)
 
 ---
