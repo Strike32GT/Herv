@@ -1,4 +1,4 @@
-![Logo de Herv](IMAGENES/logo.png)
+![Logo de Herv](IMAGENES/HervLogoMejorado.png)
 # HERV 
 
 Aplicación Web de Orientación Vocacional basada en Habilidades
