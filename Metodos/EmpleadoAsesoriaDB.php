@@ -28,7 +28,7 @@ class EmpleadoAsesoriaDB
  }
  
  public function eliminar($BD,$id_empleado){
-    $sql="DELETE FROM empleados_asesoria WHERE id_empleado=:id";
+    $sql="DELETE FROM empleado_asesoria WHERE id_empleado=:id";
     $query=$BD->prepare($sql);
     $query->bindValue(":id",$id_empleado,PDO::PARAM_INT);
     try{

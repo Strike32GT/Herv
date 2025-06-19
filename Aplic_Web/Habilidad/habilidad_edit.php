@@ -1,23 +1,21 @@
 <?php
 require_once("./Conexion/ConexionMySQL.php");
-require_once("./Modelo/EmpleadoAsesoria.php");
-require_once("./Metodos/EmpleadoAsesoriaDB.php");
+require_once("./Modelo/Habilidad.php");
+require_once("./Metodos/HabilidadDB.php");
 
 // Si se envió el formulario por POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $database = BaseMySql::conexion();
-    $empleadoAsesoriaDB = new EmpleadoAsesoriaDB();
+    $habilidadDB = new HabilidadDB();
 
-    $empleadoEditado = new EmpleadoAs(
-        $_POST["id_empleado"],        
-        $_POST["nombre"],
-        $_POST["apellido"],
-        null,
-        null
+    $habilidadEditada = new Habilidad(
+        $_POST["id_habilidad"],        
+        $_POST["Nombre"],
+        $_POST["Estado"]
     );
 
-    $resultado = $empleadoAsesoriaDB->editar($database, $empleadoEditado);
+    $resultado = $habilidadDB->editar($database, $habilidadEditada);
 
     if ($resultado == 1) {
         header("Location: courses_list.php"); #Esto si lo debo de cambiar 

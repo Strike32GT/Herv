@@ -11,9 +11,9 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     
     $convenio= new Convenio(
         null,
-        $_POST["nombre"],
-        $_POST["lugar"],
-        $_POST["sede"]
+        $_POST["Nombre"],
+        $_POST["Lugar"],
+        $_POST["Sede"]
     );
     $resultado=$convenioDB->agregar($database,$convenio);
 

@@ -11,8 +11,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $empleadoEditado = new EmpleadoAs(
         $_POST["id_empleado"],        
-        $_POST["nombre"],
-        $_POST["apellido"],
+        $_POST["Nombre"],
+        $_POST["Apellido"],
         null,
         null
     );

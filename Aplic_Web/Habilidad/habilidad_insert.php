@@ -11,8 +11,8 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     
     $habilidad= new Habilidad(
         null,
-        $_POST["nombre"],
-        $_POST["estado"]
+        $_POST["Nombre"],
+        $_POST["Estado"]
     );
     $resultado=$habilidadDB->agregar($database,$habilidad);
 

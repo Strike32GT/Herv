@@ -2,10 +2,10 @@
 require_once("./Conexion/ConexionMySQL.php");
 require_once("./Metodos/ConvenioDB.php");
 
-if (isset($_GET["id"])){
+if (isset($_GET["id_universidad"])){
     $BD=BaseMySql::conexion();
     $convenioDB=new ConvenioDB;
-    $id=intval($_GET["id"]);
+    $id=intval($_GET["id_universidad"]);
 
     $resultado=$convenioDB->eliminar($BD,$id);
 

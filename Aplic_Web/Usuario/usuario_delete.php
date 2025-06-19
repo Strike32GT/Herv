@@ -2,10 +2,10 @@
 require_once("./Conexion/ConexionMySQL.php");
 require_once("./Metodos/UsuarioDB.php");
 
-if (isset($_GET["id"])){
+if (isset($_GET["id_usuario"])){
     $BD=BaseMySql::conexion();
     $usuarioDB=new UsuarioDB;
-    $id=intval($_GET["id"]);
+    $id=intval($_GET["id_usuario"]);
 
     $resultado=$usuarioDB->eliminar($BD,$id);
 

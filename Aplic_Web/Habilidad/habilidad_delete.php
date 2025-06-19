@@ -2,10 +2,10 @@
 require_once("./Conexion/ConexionMySQL.php");
 require_once("./Metodos/HabilidadDB.php");
 
-if (isset($_GET["id"])){
+if (isset($_GET["id_habilidad"])){
     $BD=BaseMySql::conexion();
     $habilidadDB=new HabilidadDB;
-    $id=intval($_GET["id"]);
+    $id=intval($_GET["id_habilidad"]);
 
     $resultado=$habilidadDB->eliminar($BD,$id);
 

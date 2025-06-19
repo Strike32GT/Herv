@@ -11,9 +11,9 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     
     $usuario= new Usuario(
         null,
-        $_POST["nombre"],
-        $_POST["email"],
-        $_POST["password"],
+        $_POST["Nombre"],
+        $_POST["Email"],
+        $_POST["Password"],
         null
     );
     $resultado=$usuarioDB->agregar($database,$usuario);
