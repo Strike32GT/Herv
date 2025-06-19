@@ -79,15 +79,16 @@ Esta es una aplicación web desarrollada con **PHP**, **HTML5**, **CSS3** y **Ja
 
 > _Ejemplo de imágenes, reemplaza por tus propias capturas_
 
-![Pantalla de inicio](https://via.placeholder.com/800x400?text=Pantalla+de+Inicio)
+![Pantalla de inicio](https://ibb.co/ym39mRxV)
 ![Panel de administración](https://via.placeholder.com/800x400?text=Panel+de+Administraci%C3%B3n)
 
 ---
 
 ## Créditos y Autor
 
-- **Autor:** [Tu Nombre]
-- **Contacto:** [tu.email@ejemplo.com]
+- **Autor:** [Fernando Mas and Ximena Chumbirayco]
+- **Contacto:** [roberto.mas@tecsup.edu.pe]
+- **Contacto:** [ximena.chumbirayco@tecsup.edu.pe]
 
 ---
 
