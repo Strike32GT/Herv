@@ -1,17 +1,17 @@
 <?php
 if($_SERVER["REQUEST_METHOD"]=="POST" && isset($_POST["depart"])){
 require_once("../Conexion/ConexionMySQL.php");
-require_once("../Metodos/ConvenioDB.php");
-require_once("../Modelo/Convenio.php");
+require_once("../Metodos/HabilidadDB.php");
+require_once("../Modelo/Habilidad.php");
 
 
 $database=BaseMySql::conexion();
 
-$convenioDB=new ConvenioDB();
-$convenio=$convenioDB->listar($database);
+$habilidadDB=new ConvenioDB();
+$habilidad=$habilidadDB->listar($database);
 
 
-$idDepartamento=$_POST["depart"];
+
 BaseMySql::close($database);
 ?>
     
@@ -19,12 +19,12 @@ BaseMySql::close($database);
         <table class="table table-striped">
                 <thead class="table-success">
                         <tr>
-                                <th class="col md-4">Nombre</th>
-                                <th class="col md-2">Lugar</th>
+                                <th class="col md-4">N° Actividad</th>
+                                <th class="col md-2">Nombre</th>
                         </tr>
                 </thead>
                 <tbody>
-                <?php foreach($convenio as $conv) {
+                <?php foreach($habilidad as $hab) {
                         
                         foreach($professor as $profes){
                                 if($curso->professor_id==$profes->professor_id &&  

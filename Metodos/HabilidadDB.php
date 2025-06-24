@@ -5,7 +5,7 @@ class HabilidadDB
     public function listar($BD){
         $sql="SELECT habilidad.id_habilidad,habilidad.Nombre,
         habilidad.Estado
-        FROM habilidad LIMIT 10";
+        FROM habilidad LIMIT 8";
     $query=$BD->prepare($sql); 
     $query->execute();
     return $query->fetchAll(PDO::FETCH_OBJ);

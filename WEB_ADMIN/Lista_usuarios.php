@@ -12,7 +12,7 @@ require_once('../Layout/header.php');
 ?>
 <div class="fs-1 text-start">Usuarios</div>
         <div class="text-end mb-3">
-            <a href="#" class="btn btn-success">Agregar</a>    
+            <a href="Crear_Usuario.php" class="btn btn-success">Agregar</a>    
         </div>
         <table class="table table-striped">
                 <thead class="table-info">
