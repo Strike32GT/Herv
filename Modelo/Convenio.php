@@ -1,16 +1,16 @@
 <?php
 class Convenio{
     private $_id_universidad;
-    private $_nombre;
-    private $_lugar;
-    private $_sede;
+    private $_Nombre;
+    private $_Lugar;
+    private $_Sede;
 
-    public function __construct($id_universidad,$nombre,$lugar,$sede)
+    public function __construct($id_universidad,$Nombre,$Lugar,$Sede)
     { 
         $this->_id_universidad=$id_universidad;
-        $this->_nombre=$nombre;
-        $this->_lugar=$lugar;
-        $this->_sede=$sede;
+        $this->_Nombre=$Nombre;
+        $this->_Lugar=$Lugar;
+        $this->_Sede=$Sede;
     }
 
     //GETTER
@@ -19,15 +19,15 @@ class Convenio{
     }
 
     public function getNombre(){
-        return $this->_nombre;
+        return $this->_Nombre;
     }
      
     public function getLugar(){
-        return $this->_lugar;
+        return $this->_Lugar;
     }
 
     public function getSede(){
-        return $this->_sede;
+        return $this->_Sede;
     }
     
 
@@ -38,16 +38,16 @@ class Convenio{
         $this->_id_universidad=$id_universidad;
     }
 
-    public function setNombre($nombre){
-        $this->_nombre=$nombre;
+    public function setNombre($Nombre){
+        $this->_Nombre=$Nombre;
     }
 
-    public function setLugar($lugar){
-        $this->_lugar=$lugar;
+    public function setLugar($Lugar){
+        $this->_Lugar=$Lugar;
     }
 
-    public function setSede($sede){
-        $this->_sede=$sede;
+    public function setSede($Sede){
+        $this->_Sede=$Sede;
     }
 
 }

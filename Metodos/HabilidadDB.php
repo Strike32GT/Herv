@@ -1,11 +1,11 @@
 <?php
-require_once("./Modelo/Habilidad.php");
+require_once("../Modelo/Habilidad.php");
 class HabilidadDB
 {
     public function listar($BD){
         $sql="SELECT habilidad.id_habilidad,habilidad.Nombre,
         habilidad.Estado
-        FROM habilidad";
+        FROM habilidad LIMIT 10";
     $query=$BD->prepare($sql); 
     $query->execute();
     return $query->fetchAll(PDO::FETCH_OBJ);

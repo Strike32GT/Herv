@@ -1,5 +1,5 @@
 <?php
-require_once("./Modelo/Convenio.php");
+require_once("../Modelo/Convenio.php");
 class ConvenioDB
 {
     public function listar($BD){

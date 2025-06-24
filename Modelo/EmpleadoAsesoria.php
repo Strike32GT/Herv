@@ -1,18 +1,18 @@
 <?php
 class EmpleadoAs{
     private $_id_empleado;
-    private $_nombre;
-    private $_apellido;
-    private $_fecha_incorporacion;
-    private $_admin_id_admin;
+    private $_Nombre;
+    private $_Apellido;
+    private $_Fecha_incorporacion;
+    private $_Admin_id_admin;
 
-    public function __construct($id_empleado,$nombre,$apellido,$fecha_incorporacion,$admin_id_admin)
+    public function __construct($id_empleado,$Nombre,$Apellido,$Fecha_incorporacion,$Admin_id_admin)
     { 
         $this->_id_empleado=$id_empleado;
-        $this->_nombre=$nombre;
-        $this->_apellido=$apellido;
-        $this->_fecha_incorporacion=$fecha_incorporacion;
-        $this->_admin_id_admin=$admin_id_admin;
+        $this->_Nombre=$Nombre;
+        $this->_Apellido=$Apellido;
+        $this->_Fecha_incorporacion=$Fecha_incorporacion;
+        $this->_Admin_id_admin=$Admin_id_admin;
     }
 
     //GETTER
@@ -21,19 +21,19 @@ class EmpleadoAs{
     }
 
     public function getNombre(){
-        return $this->_nombre;
+        return $this->_Nombre;
     }
      
     public function getApellido(){
-        return $this->_apellido;
+        return $this->_Apellido;
     }
 
     public function getFecha_Incorporacion(){
-        return $this->_fecha_incorporacion;
+        return $this->_Fecha_incorporacion;
     }
 
     public function getAdmin_id_Admin(){
-        return $this->_admin_id_admin;
+        return $this->_Admin_id_admin;
     }
 
 
@@ -43,20 +43,20 @@ class EmpleadoAs{
         $this->_id_empleado=$id_empleado;
     }
 
-    public function setNombre($nombre){
-        $this->_nombre=$nombre;
+    public function setNombre($Nombre){
+        $this->_Nombre=$Nombre;
     }
 
-    public function setApellido($apellido){
-        $this->_apellido=$apellido;
+    public function setApellido($Apellido){
+        $this->_Apellido=$Apellido;
     }
 
-    public function setFecha_Incorporacion($fecha_incorporacion){
-        $this->_fecha_incorporacion=$fecha_incorporacion;
+    public function setFecha_Incorporacion($Fecha_incorporacion){
+        $this->_Fecha_incorporacion=$Fecha_incorporacion;
     }
 
-    public function setAdmin_id_Admin($admin_id_admin){
-        $this->_admin_id_admin=$admin_id_admin;
+    public function setAdmin_id_Admin($Admin_id_admin){
+        $this->_Admin_id_admin=$Admin_id_admin;
     }
 }
 ?>

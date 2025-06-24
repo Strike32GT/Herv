@@ -1,5 +1,5 @@
 <?php
-require_once("./Modelo/Usuarios.php");
+require_once("../Modelo/Usuario.php");
 class UsuarioDB
 {
     public function listar($BD){

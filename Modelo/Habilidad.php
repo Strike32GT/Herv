@@ -1,14 +1,14 @@
 <?php
 class Habilidad{
     private $_id_habilidad;
-    private $_nombre;
-    private $_estado;
+    private $_Nombre;
+    private $_Estado;
 
-    public function __construct($id_habilidad,$nombre,$estado)
+    public function __construct($id_habilidad,$Nombre,$Estado)
     { 
         $this->_id_habilidad=$id_habilidad;
-        $this->_nombre=$nombre;
-        $this->_estado=$estado;
+        $this->_Nombre=$Nombre;
+        $this->_Estado=$Estado;
     }
 
     //GETTER
@@ -17,11 +17,11 @@ class Habilidad{
     }
 
     public function getNombre(){
-        return $this->_nombre;
+        return $this->_Nombre;
     }
      
     public function getEstado(){
-        return $this->_estado;
+        return $this->_Estado;
     }
 
     
@@ -33,12 +33,12 @@ class Habilidad{
         $this->_id_habilidad=$id_habilidad;
     }
 
-    public function setNombre($nombre){
-        $this->_nombre=$nombre;
+    public function setNombre($Nombre){
+        $this->_Nombre=$Nombre;
     }
 
-    public function setEstado($estado){
-        $this->_estado=$estado;
+    public function setEstado($Estado){
+        $this->_Estado=$Estado;
     }
 
     

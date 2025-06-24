@@ -1,11 +1,11 @@
 <?php
-require_once("./Modelo/EmpleadoAsesoria.php");
+require_once("../Modelo/EmpleadoAsesoria.php");
 class EmpleadoAsesoriaDB
 {
     public function listar($BD){
-        $sql="SELECT empleado_asesoria.id_empleado,empleado_asesoria.Nombre,
-        empleado_asesoria.Apellido,empleado_asesoria.Fecha_Incorporacion,empleado_asesoria.admin_id_admin
-        FROM empleado_asesoria";
+        $sql="SELECT empleado_asesoría.id_empleado,empleado_asesoría.Nombre,
+        empleado_asesoría.Apellido,empleado_asesoría.Fecha_incorporacion,empleado_asesoría.Admin_id_admin
+        FROM empleado_asesoría";
     $query=$BD->prepare($sql); 
     $query->execute();
     return $query->fetchAll(PDO::FETCH_OBJ);

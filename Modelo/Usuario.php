@@ -1,18 +1,18 @@
 <?php
 class Usuario{
     private $_id_usuario;
-    private $_nombre;
-    private $_email;
-    private $_password;
-    private $_fecha_creacion;
+    private $_Nombre;
+    private $_Email;
+    private $_Password;
+    private $_Fecha_creacion;
 
-    public function __construct($id_usuario,$nombre,$email,$password,$fecha_creacion)
+    public function __construct($id_usuario,$Nombre,$Email,$Password,$Fecha_creacion)
     { 
         $this->_id_usuario=$id_usuario;
-        $this->_nombre=$nombre;
-        $this->_email=$email;
-        $this->_password=$password;
-        $this->_fecha_creacion=$fecha_creacion;
+        $this->_Nombre=$Nombre;
+        $this->_Email=$Email;
+        $this->_Password=$Password;
+        $this->_Fecha_creacion=$Fecha_creacion;
     }
 
     //GETTER
@@ -21,19 +21,19 @@ class Usuario{
     }
 
     public function getNombre(){
-        return $this->_nombre;
+        return $this->_Nombre;
     }
      
     public function getEmail(){
-        return $this->_email;
+        return $this->_Email;
     }
 
     public function getPassword(){
-        return $this->_password;
+        return $this->_Password;
     }
 
     public function getFecha_Creacion(){
-        return $this->_fecha_creacion;
+        return $this->_Fecha_creacion;
     }
 
     //SETTER
@@ -41,20 +41,20 @@ class Usuario{
         $this->_id_usuario=$id_usuario;
     }
 
-    public function setNombre($nombre){
-        $this->_nombre=$nombre;
+    public function setNombre($Nombre){
+        $this->_Nombre=$Nombre;
     }
 
-    public function setEmail($email){
-        $this->_email=$email;
+    public function setEmail($Email){
+        $this->_Email=$Email;
     }
 
-    public function setPassword($password){
-        $this->_password=$password;
+    public function setPassword($Password){
+        $this->_Password=$Password;
     }
 
-    public function setFecha_Creacion($fecha_creacion){
-        $this->_fecha_creacion=$fecha_creacion;
+    public function setFecha_Creacion($Fecha_creacion){
+        $this->_Fecha_creacion=$Fecha_creacion;
     }
 }
 ?>
