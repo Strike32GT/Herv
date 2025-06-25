@@ -18,6 +18,7 @@ require_once('../Layout/header.php');
                 <thead class="table-info">
                         <tr>
                                 <th class="col md-4">Nombre</th>
+                                <th class="col md-4">Apellido</th>
                                 <th class="col md-2">Email</th>
                                 <th class="col md-2">Password</th>
                                 <th class="col md-2">Fecha de Creación</th>
@@ -32,6 +33,7 @@ require_once('../Layout/header.php');
                         ?>
                         <tr>
                                 <td><?php echo $user->Nombre;?></td>
+                                <td><?php echo $user->Apellido;?></td>
                                 <td><?php echo $user->Email;?></td>
                                 <td><?php echo $user->Password;?></td>       
                                 <td><?php echo $user->Fecha_creacion;?></td>       

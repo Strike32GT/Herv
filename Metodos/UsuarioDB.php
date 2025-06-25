@@ -3,7 +3,7 @@ require_once("../Modelo/Usuario.php");
 class UsuarioDB
 {
     public function listar($BD){
-        $sql="SELECT usuario.id_usuario,usuario.Nombre,
+        $sql="SELECT usuario.id_usuario,usuario.Nombre,usuario.Apellido,
         usuario.Email,usuario.Password,usuario.Fecha_creacion
         FROM usuario";
     $query=$BD->prepare($sql); 

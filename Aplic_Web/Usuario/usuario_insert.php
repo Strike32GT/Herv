@@ -1,7 +1,7 @@
 <?php
-require_once("./Conexion/ConexionMySQL.php");
-require_once("./Modelo/Usuario.php");
-require_once("./Metodos/UsuarioDB.php");
+require_once("../Conexion/ConexionMySQL.php");
+require_once("../Modelo/Usuario.php");
+require_once("../Metodos/UsuarioDB.php");
 
 if($_SERVER["REQUEST_METHOD"]=="POST"){
     

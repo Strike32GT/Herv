@@ -12,7 +12,7 @@ require_once('../Layout/header.php');
 ?>
 <div class="fs-1 text-start">Convenios</div>
         <div class="text-end mb-3">
-            <a href="#" class="btn btn-success">Agregar</a>
+            <a href="Crear_Convenio.php" class="btn btn-success">Agregar</a>
             <a href="Buscar_sede.php" class="btn btn-info">Buscar por Sede</a>    
         </div>
         <table class="table table-striped">
@@ -38,7 +38,7 @@ require_once('../Layout/header.php');
                                 <td class="d-flex gap-2">
                                 <button href="#" class="btn btn-outline-info">Editar</button>
 
-                                <form action="">
+                                <form action="../Aplic_Web/Convenio/convenio_delete.php">
                                         <input type="hidden" name="id" value="aca coloco lo del php">
                                         <button type="submit" class="btn btn-outline-danger">Eliminar</button>
                                 </form>

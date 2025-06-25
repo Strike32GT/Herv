@@ -12,7 +12,7 @@ require_once('../Layout/header.php');
 ?>
 <div class="fs-1 text-start">Habilidad</div>
         <div class="text-end mb-3">
-            <a href="#" class="btn btn-success">Agregar</a>
+            <a href="Crear_Habilidad.php" class="btn btn-success">Agregar</a>
             <a href="Buscar_estado.php" class="btn btn-info">Buscar por Estado</a>    
         </div>
         <table class="table table-striped">

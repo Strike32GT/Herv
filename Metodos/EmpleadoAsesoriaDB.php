@@ -3,9 +3,10 @@ require_once("../Modelo/EmpleadoAsesoria.php");
 class EmpleadoAsesoriaDB
 {
     public function listar($BD){
-        $sql="SELECT empleado_asesoría.id_empleado,empleado_asesoría.Nombre,
-        empleado_asesoría.Apellido,empleado_asesoría.Fecha_incorporacion,empleado_asesoría.Admin_id_admin
-        FROM empleado_asesoría";
+        $sql="SELECT empleado_asesoria.id_empleado,empleado_asesoria.Nombre,
+        empleado_asesoria.Apellido,empleado_asesoria.Usuario,empleado_asesoria.Password,
+        empleado_asesoria.Fecha_incorporacion,empleado_asesoria.Admin_id_admin
+        FROM empleado_asesoria";
     $query=$BD->prepare($sql); 
     $query->execute();
     return $query->fetchAll(PDO::FETCH_OBJ);
