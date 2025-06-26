@@ -1,16 +1,18 @@
 <?php
-require_once("./Conexion/ConexionMySQL.php");
-require_once("./Metodos/EmpleadoAsesoriaDB.php");
+require_once(__DIR__."/../../Conexion/ConexionMySQL.php");
+require_once(__DIR__."/../../Metodos/EmpleadoAsesoriaDB.php");
+require_once(__DIR__."/../../Modelo/EmpleadoAsesoria.php");
 
-if (isset($_GET["id_empleado"])){
+
+if (isset($_POST["id_empleado"])){
     $BD=BaseMySql::conexion();
     $empleadoAsesoriaDB=new EmpleadoAsesoriaDB;
-    $id=intval($_GET["id_empleado"]);
+    $id=intval($_POST["id_empleado"]);
 
     $resultado=$empleadoAsesoriaDB->eliminar($BD,$id);
 
     if($resultado == 1){
-        header("Location: aquí tengo que cambiar");
+        header("Location: /Proyecto Final/WEB_ADMIN/Lista_empleados.php");
         exit();
     }
     else{

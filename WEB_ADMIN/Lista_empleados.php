@@ -41,10 +41,14 @@ require_once('../Layout/header.php');
                                 <td><?php echo $emp->Fecha_incorporacion;?></td>     
                                          
                                 <td class="d-flex gap-2">
-                                <button href="#" class="btn btn-outline-info">Editar</button>
 
-                                <form action="">
-                                        <input type="hidden" name="id" value="aca coloco lo del php">
+                                <form action="Editar_Empleado.php" method="post">
+                                        <input type="hidden" name="id_empleado" value="<?php echo $emp->id_empleado;?>">
+                                        <button type="submit" class="btn btn-outline-info">Editar</button>
+                                </form>
+
+                                <form action="../Aplic_Web/Empleado_Asesoría/empleado_asesoria__delete.php" method="post">
+                                        <input type="hidden" name="id_empleado" value="<?php echo $emp->id_empleado;?>">
                                         <button type="submit" class="btn btn-outline-danger">Eliminar</button>
                                 </form>
 

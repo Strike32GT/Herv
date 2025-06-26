@@ -1,5 +1,5 @@
 <?php
-require_once("../Modelo/Usuario.php");
+require_once(__DIR__."/../Modelo/Usuario.php");
 class UsuarioDB
 {
     public function listar($BD){
@@ -12,10 +12,11 @@ class UsuarioDB
     }
 
  public function agregar($BD,$usuario){
-    $sql="INSERT INTO usuario(Nombre,Email,Password)
-    VALUES (:Nombre,:Email,:Password)";
+    $sql="INSERT INTO usuario(Nombre,Apellido,Email,Password)
+    VALUES (:Nombre,:Apellido,:Email,:Password)";
     $query=$BD->prepare($sql);
     $query->bindValue(":Nombre",$usuario->getNombre());
+    $query->bindValue(":Apellido",$usuario->getApellido());
     $query->bindValue(":Email",$usuario->getEmail());
     $query->bindValue(":Password",$usuario->getPassword());
     try{

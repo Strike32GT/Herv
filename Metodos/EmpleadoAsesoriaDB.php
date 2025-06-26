@@ -1,5 +1,5 @@
 <?php
-require_once("../Modelo/EmpleadoAsesoria.php");
+require_once(__DIR__."/../Modelo/EmpleadoAsesoria.php");
 class EmpleadoAsesoriaDB
 {
     public function listar($BD){
@@ -13,11 +13,14 @@ class EmpleadoAsesoriaDB
     }
 
  public function agregar($BD,$empleado){
-    $sql="INSERT INTO empleado_asesoria(Nombre,Apellido)
-    VALUES (:Nombre,:Apellido)";
+    $sql="INSERT INTO empleado_asesoria(Nombre,Apellido,Usuario,Password,Admin_id_admin)
+    VALUES (:Nombre,:Apellido,:Usuario,:Password,:Admin_id_admin)";
     $query=$BD->prepare($sql);
     $query->bindValue(":Nombre",$empleado->getNombre());
     $query->bindValue(":Apellido",$empleado->getApellido());
+    $query->bindValue(":Usuario",$empleado->getUsuario());
+    $query->bindValue(":Password",$empleado->getPassword());
+    $query->bindValue(":Admin_id_admin",$empleado->getAdmin_id_admin());
     try{
         $query->execute();
         return 1;
@@ -44,11 +47,13 @@ class EmpleadoAsesoriaDB
 
 
  public function editar($BD,$empleado){
-    $sql="UPDATE empleado_asesoria SET Nombre=:Nombre, Apellido=:Apellido
+    $sql="UPDATE empleado_asesoria SET Nombre=:Nombre, Apellido=:Apellido, Usuario=:Usuario, Password=:Password
           WHERE id_empleado=:id";
     $query=$BD->prepare($sql);
     $query->bindValue(":Nombre",$empleado->getNombre());      
     $query->bindValue(":Apellido",$empleado->getApellido());
+    $query->bindValue(":Usuario",$empleado->getUsuario());
+    $query->bindValue(":Password",$empleado->getPassword());
     $query->bindValue(":id",$empleado->getId(),PDO::PARAM_INT);      
      
     try{
@@ -59,7 +64,15 @@ class EmpleadoAsesoriaDB
         echo $err->getMessage();
         return -1;
     }
-
  }
+ 
+ public function buscarPorId($BD, $id_empleado) {
+    $sql = "SELECT * FROM empleado_asesoria WHERE id_empleado = :id";
+    $query = $BD->prepare($sql);
+    $query->bindValue(":id", $id_empleado, PDO::PARAM_INT);
+    $query->execute();
+    return $query->fetch(PDO::FETCH_OBJ);
+ }
+
 }
 ?>

@@ -18,16 +18,19 @@ BaseMySql::close($database);
 ?>
 <div class="fs-1 text-start">Registro Usuario</div>
 <form action="../Aplic_Web/Usuario/usuario_insert.php" method="post">
+
     <div class="form-group mb-3">
         <label for="">Nombre</label>
-        <input type="text" name="Nombre" maxlength="500" required class="form-control w-50">
+        <input type="text" name="Nombre" id="Nombre" maxlength="500" required class="form-control w-50">
     </div>
+
     <div class="row mb-3">
         <div class="col md-6">
             <label for="">Apellido</label>
             <input type="text" name="Apellido" id="Apellido"  required class="form-control w-50">
         </div>
     </div>
+
     <div class="row mb-3">
         <div class="col md-6">
             <label for="">Email</label>
