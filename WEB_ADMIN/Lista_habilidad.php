@@ -35,10 +35,15 @@ require_once('../Layout/header.php');
                                 <td><?php echo $hab->Nombre;?></td>
                                 <td><?php echo $hab->Estado;?></td>       
                                 <td class="d-flex gap-2">
-                                <button href="#" class="btn btn-outline-info">Editar</button>
+                                
+                                <form action="Editar_Habilidad.php" method="post">
+                                        <input type="hidden" name="id_habilidad" value="<?php echo $hab->id_habilidad;?>">
+                                        <button type="submit" class="btn btn-outline-info">Editar</button>
+                                </form>
 
-                                <form action="">
-                                        <input type="hidden" name="id" value="aca coloco lo del php">
+                                
+                                <form action="../Aplic_Web/Habilidad/habilidad_delete.php" method="post">
+                                        <input type="hidden" name="id_habilidad" value="<?php echo $hab->id_habilidad;?>">
                                         <button type="submit" class="btn btn-outline-danger">Eliminar</button>
                                 </form>
 

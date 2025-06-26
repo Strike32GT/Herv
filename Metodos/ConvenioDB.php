@@ -1,5 +1,5 @@
 <?php
-require_once("../Modelo/Convenio.php");
+require_once(__DIR__."/../Modelo/Convenio.php");
 class ConvenioDB
 {
     public function listar($BD){
@@ -61,6 +61,28 @@ class ConvenioDB
         return -1;
     }
  }
+
+ public function buscarPorId($BD, $id_universidad) {
+    $sql = "SELECT * FROM convenio WHERE id_universidad = :id";
+    $query = $BD->prepare($sql);
+    $query->bindValue(":id", $id_universidad, PDO::PARAM_INT);
+    $query->execute();
+    return $query->fetch(PDO::FETCH_OBJ);
+ }
+
+ public function ActividadEnumEstado($BD){
+    $sql="SHOW COLUMNS FROM convenio LIKE 'Sede'";
+    $query=$BD->prepare($sql);
+    $query->execute();
+    $column=$query->fetch(PDO::FETCH_ASSOC);
+
+    if (!$column || stripos($column['Type'], 'enum') === false) {
+    return [];
+}
+
+    preg_match_all("/'([^']+)'/", $column['Type'], $matches);
+    return $matches[1];
+  } 
 
 
 }

@@ -36,10 +36,14 @@ require_once('../Layout/header.php');
                                 <td><?php echo $conv->Sede;?></td>       
 
                                 <td class="d-flex gap-2">
-                                <button href="#" class="btn btn-outline-info">Editar</button>
+
+                                <form action="Editar_Convenio.php" method="post">
+                                        <input type="hidden" name="id_universidad" value="<?php echo $conv->id_universidad;?>">
+                                        <button type="submit" class="btn btn-outline-info">Editar</button>
+                                </form>
 
                                 <form action="../Aplic_Web/Convenio/convenio_delete.php">
-                                        <input type="hidden" name="id" value="aca coloco lo del php">
+                                        <input type="hidden" name="id_universidad" value="<?php echo $conv->id_universidad;?>">
                                         <button type="submit" class="btn btn-outline-danger">Eliminar</button>
                                 </form>
 

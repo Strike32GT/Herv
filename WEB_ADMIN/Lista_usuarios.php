@@ -40,7 +40,11 @@ require_once('../Layout/header.php');
                                 
 
                                 <td class="d-flex gap-2">
-                                <button href="#" class="btn btn-outline-info">Editar</button>
+                                        
+                                <form action="Editar_Usuario.php" method="post">
+                                        <input type="hidden" name="id_usuario" value="<?php echo $user->id_usuario;?>">
+                                        <button type="submit" class="btn btn-outline-info">Editar</button>
+                                </form>
 
                                 <form action="../Aplic_Web/Usuario/usuario_delete.php" method="post">
                                         <input type="hidden" name="id_usuario" value="<?php echo $user->id_usuario;?>">

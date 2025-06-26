@@ -30,10 +30,11 @@ class UsuarioDB
  }
 
 public function editar($BD,$usuario){
-    $sql="UPDATE usuario SET Nombre=:Nombre, Email=:Email,Password=:Password
+    $sql="UPDATE usuario SET Nombre=:Nombre, Apellido=:Apellido, Email=:Email,Password=:Password
           WHERE id_usuario=:id";
     $query=$BD->prepare($sql);
     $query->bindValue(":Nombre",$usuario->getNombre());      
+    $query->bindValue(":Apellido",$usuario->getApellido());      
     $query->bindValue(":Email",$usuario->getEmail());
     $query->bindValue(":Password",$usuario->getPassword());
     $query->bindValue(":id",$usuario->getId(),PDO::PARAM_INT);      
@@ -63,6 +64,15 @@ public function editar($BD,$usuario){
         return -1;
     }
  }
+
+ public function buscarPorId($BD, $id_usuario) {
+    $sql = "SELECT * FROM usuario WHERE id_usuario = :id";
+    $query = $BD->prepare($sql);
+    $query->bindValue(":id", $id_usuario, PDO::PARAM_INT);
+    $query->execute();
+    return $query->fetch(PDO::FETCH_OBJ);
+ }
+
 
 }
 ?>

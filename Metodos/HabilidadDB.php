@@ -1,5 +1,5 @@
 <?php
-require_once("../Modelo/Habilidad.php");
+require_once(__DIR__."/../Modelo/Habilidad.php");
 class HabilidadDB
 {
     public function listar($BD){
@@ -59,5 +59,29 @@ class HabilidadDB
         return -1;
     }
  }
+
+  public function buscarPorId($BD, $id_habilidad) {
+    $sql = "SELECT * FROM habilidad WHERE id_habilidad = :id";
+    $query = $BD->prepare($sql);
+    $query->bindValue(":id", $id_habilidad, PDO::PARAM_INT);
+    $query->execute();
+    return $query->fetch(PDO::FETCH_OBJ);
+ } 
+
+
+  public function ActividadEnumEstado($BD){
+    $sql="SHOW COLUMNS FROM habilidad LIKE 'Estado'";
+    $query=$BD->prepare($sql);
+    $query->execute();
+    $column=$query->fetch(PDO::FETCH_ASSOC);
+
+    if (!$column || stripos($column['Type'], 'enum') === false) {
+    return [];
+}
+
+    preg_match_all("/'([^']+)'/", $column['Type'], $matches);
+    return $matches[1];
+  }  
+
 }
 ?>
