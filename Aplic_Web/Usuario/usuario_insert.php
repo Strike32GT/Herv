@@ -20,7 +20,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     $resultado=$usuarioDB->agregar($database,$usuario);
 
     if($resultado==1){
-        header("Location: /Proyecto Final/WEB_ADMIN/Lista_usuarios.php");
+        header("Location: /ProyectoFinal/WEB_ADMIN/Lista_usuarios.php");
     }
     else{
         echo "Error al agregar";

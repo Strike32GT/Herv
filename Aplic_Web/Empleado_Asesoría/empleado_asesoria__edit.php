@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $resultado = $empleadoAsesoriaDB->editar($database, $empleadoEditado);
 
     if ($resultado == 1) {
-        header("Location: /Proyecto Final/WEB_ADMIN/Lista_empleados.php");  
+        header("Location: /ProyectoFinal/WEB_ADMIN/Lista_empleados.php");  
         exit(); 
     } else {
         echo "Error al editar el empleado.";

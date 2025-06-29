@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $resultado = $habilidadDB->editar($database, $habilidadEditada);
 
     if ($resultado == 1) {
-        header("Location: /Proyecto Final/WEB_ADMIN/Lista_habilidad.php"); 
+        header("Location: /ProyectoFinal/WEB_ADMIN/Lista_habilidad.php"); 
         exit(); 
     } else {
         echo "Error al editar el empleado.";

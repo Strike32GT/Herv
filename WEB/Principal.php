@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -19,7 +22,21 @@
                 <li><a href="Donaciones.html">Donaciones</a></li>
                 <li><a href="Foro.html">Foro</a></li>
             </ul>
-            <a href="Login.html" class="action_btn">Login</a>
+
+
+
+            <a class="action_btn" href="<?php echo isset($_SESSION['nombre']) ? '../Aplic_Web/Cerrar_Sesion/logout.php' : 'Login.html'?>">
+                <?php
+                    echo isset($_SESSION['nombre'])
+                    ? "Bienvenido, ". htmlspecialchars($_SESSION['nombre']). " || Cerrar Sesión" : "Login";
+                ?>
+            </a>    
+
+            
+            
+            
+            
+            
             <div class="toggle_btn">
                 <i class="fa-solid fa-bars"></i>
             </div>

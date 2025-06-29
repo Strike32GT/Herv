@@ -12,7 +12,7 @@ if (isset($_POST["id_usuario"])){
     $resultado=$usuarioDB->eliminar($BD,$id);
 
     if($resultado == 1){
-        header("Location: /Proyecto Final/WEB_ADMIN/Lista_usuarios.php");
+        header("Location: /ProyectoFinal/WEB_ADMIN/Lista_usuarios.php");
         exit();
     }
     else{

@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $resultado = $convenioDB->editar($database, $convenioEditado);
 
     if ($resultado == 1) {
-        header("Location: /Proyecto Final/WEB_ADMIN/Lista_convenios.php");  
+        header("Location: /ProyectoFinal/WEB_ADMIN/Lista_convenios.php");  
         exit(); 
     } else {
         echo "Error al editar el empleado.";

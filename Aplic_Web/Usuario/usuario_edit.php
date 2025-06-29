@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $resultado = $usuarioDB->editar($database, $usuarioEditado);
 
     if ($resultado == 1) {
-        header("Location: /Proyecto Final/WEB_ADMIN/Lista_usuarios.php"); 
+        header("Location: /ProyectoFinal/WEB_ADMIN/Lista_usuarios.php"); 
         exit(); 
     } else {
         echo "Error al editar el empleado.";

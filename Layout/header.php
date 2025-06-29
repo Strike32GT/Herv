@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -14,7 +17,10 @@
         <nav class="navbar navbar-expand-lg bg-primary sticky-top border-bottom border-body" data-bs-theme="dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="Lista_usuarios.php">Modo Admin👓</a>
-                <div class="collapse navbar-collapse">
+
+
+
+                <div class="collapse navbar-collapse justify-content-between">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="Lista_usuarios.php">Usuarios</a>
@@ -29,7 +35,18 @@
                             <a class="nav-link active" href="Lista_Convenios.php">Convenio</a>
                         </li>
                     </ul>
+
+                    <span class="navbar-text text-white me-3">
+                        Bienvenido, <?php echo htmlspecialchars($_SESSION["nombre"]);?>
+                        |
+                        <a href="../Aplic_Web/Cerrar_Sesion/logout.php" class="text-white text-decoration-underline">Cerrar Sesión</a>
+                    </span>
+
                 </div>
+
+
+
+
             </div>
         </nav>
     </header>

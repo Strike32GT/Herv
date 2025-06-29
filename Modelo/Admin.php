@@ -1,5 +1,5 @@
 <?php
-class Usuario{
+class Admin{
     private $_id_admin;
     private $_Nombre;
     private $_Apellido;
@@ -39,8 +39,8 @@ class Usuario{
     
 
     //SETTER
-    public function setId($id_usuario){
-        $this->_id_usuario=$id_usuario;
+    public function setId($id_admin){
+        $this->_id_admin=$id_admin;
     }
 
     public function setNombre($Nombre){

@@ -21,7 +21,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     $resultado=$empleadoAsesoriaDB->agregar($database,$empleadoAs);
 
     if($resultado==1){
-        header("Location: /Proyecto Final/WEB_ADMIN/Lista_empleados.php"); 
+        header("Location: /ProyectoFinal/WEB_ADMIN/Lista_empleados.php"); 
     }
     else{
         echo "Error al agregar";

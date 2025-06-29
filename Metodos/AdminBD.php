@@ -1,5 +1,5 @@
 <?php
-require_once("../Modelo/Admin.php");
+require_once(__DIR__."/../Modelo/Admin.php");
 class AdminBD
 {
     public function listar($BD){

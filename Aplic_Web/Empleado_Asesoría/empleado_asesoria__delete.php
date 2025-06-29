@@ -12,7 +12,7 @@ if (isset($_POST["id_empleado"])){
     $resultado=$empleadoAsesoriaDB->eliminar($BD,$id);
 
     if($resultado == 1){
-        header("Location: /Proyecto Final/WEB_ADMIN/Lista_empleados.php");
+        header("Location: /ProyectoFinal/WEB_ADMIN/Lista_empleados.php");
         exit();
     }
     else{
