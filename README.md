@@ -86,7 +86,7 @@ La plataforma utiliza **XAMPP** como servidor local y se conecta a una base de d
 > _Ejemplo de imágenes, reemplaza por tus propias capturas_
 
 ![Pantalla de inicio](Capturas/WindowsUser.png)
-![Panel de administración](https://via.placeholder.com/800x400?text=Panel+de+Administraci%C3%B3n)
+![Panel de administración](Capturas/Pestaña%20Admin.png)
 
 ---
 
